@@ -31,7 +31,7 @@ jobs:
 
       - name: Run DVC pipeline
         run: |
-          poetry run dvc pull
+          poetry run repro -f preprocess
           poetry dvc repro -f hp_tune
       
       - name: Create training branch
