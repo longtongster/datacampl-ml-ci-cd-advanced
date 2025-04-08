@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: python3 preprocess_dataset.py
+    deps:
+    - path: preprocess_dataset.py
+      hash: md5
+      md5: 9728c641741280fe25f068358ed99be6
+      size: 3392
+    - path: raw_dataset/weather.csv
+      hash: md5
+      md5: 2968a54f969d7b1e1bfe6c8346bc2c4a
+      size: 10105884
+    - path: utils_and_constants.py
+      hash: md5
+      md5: 7f67fd6ce1bc59a6992a4f32f0d62e4e
+      size: 1562
+    outs:
+    - path: processed_dataset/weather.csv
+      hash: md5
+      md5: aca6da1ed30d43918b2a1e61eff72f4b
+      size: 40026903
