@@ -20,3 +20,27 @@ stages:
       hash: md5
       md5: aca6da1ed30d43918b2a1e61eff72f4b
       size: 40026903
+  hp_tune:
+    cmd: python3 hp_tuning.py
+    deps:
+    - path: hp_config.json
+      hash: md5
+      md5: 6abe91338281f185a1a2543317e44487
+      size: 92
+    - path: hp_tuning.py
+      hash: md5
+      md5: a84cadda95b41a684ba4ac81558eb484
+      size: 1264
+    - path: processed_dataset/weather.csv
+      hash: md5
+      md5: aca6da1ed30d43918b2a1e61eff72f4b
+      size: 40026903
+    - path: utils_and_constants.py
+      hash: md5
+      md5: 7f67fd6ce1bc59a6992a4f32f0d62e4e
+      size: 1562
+    outs:
+    - path: hp_tuning_results.md
+      hash: md5
+      md5: 8f42b7c585209e2daae251be2a4fc68b
+      size: 1198
