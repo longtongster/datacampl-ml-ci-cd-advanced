@@ -44,3 +44,31 @@ stages:
       hash: md5
       md5: 8f42b7c585209e2daae251be2a4fc68b
       size: 1198
+  train:
+    cmd: python3 train.py
+    deps:
+    - path: processed_dataset/weather.csv
+      hash: md5
+      md5: aca6da1ed30d43918b2a1e61eff72f4b
+      size: 40026903
+    - path: rfc_best_params.json
+      hash: md5
+      md5: 4fb13c75baa07df2b38661981376d049
+      size: 58
+    - path: utils_and_constants.py
+      hash: md5
+      md5: 7f67fd6ce1bc59a6992a4f32f0d62e4e
+      size: 1562
+    outs:
+    - path: metrics.json
+      hash: md5
+      md5: 54ca2f191f80d5f522d920c70437baf2
+      size: 79
+    - path: predictions.csv
+      hash: md5
+      md5: c01484fc17f0614c13469604524141f8
+      size: 99543
+    - path: roc_curve.csv
+      hash: md5
+      md5: 9d807948dabedb62362f05fc3ef73755
+      size: 303990

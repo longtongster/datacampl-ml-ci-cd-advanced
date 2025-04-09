@@ -20,3 +20,16 @@ stages:
     outs:
       - hp_tuning_results.md:
           cache: false
+  train:
+    cmd: python3 train.py
+    deps:
+      - processed_dataset/weather.csv
+      - rfc_best_params.json
+      - utils_and_constants.py
+    outs:
+      - metrics.json:
+          cache: false
+      - predictions.csv:
+          cache: false
+      - roc_curve.csv:
+          cache: false
