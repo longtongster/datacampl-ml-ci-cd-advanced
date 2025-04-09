@@ -47,6 +47,14 @@ stages:
   train:
     cmd: python3 train.py
     deps:
+    - path: metrics_and_plots.py
+      hash: md5
+      md5: 68673e630a07bbfd82327ad155cba9e7
+      size: 992
+    - path: model.py
+      hash: md5
+      md5: 8ebcde4f2b53a880245c4267906e19b0
+      size: 1032
     - path: processed_dataset/weather.csv
       hash: md5
       md5: aca6da1ed30d43918b2a1e61eff72f4b
@@ -55,6 +63,10 @@ stages:
       hash: md5
       md5: 4fb13c75baa07df2b38661981376d049
       size: 58
+    - path: train.py
+      hash: md5
+      md5: a3660d6c32d23431cf2fef6829d730b7
+      size: 978
     - path: utils_and_constants.py
       hash: md5
       md5: 7f67fd6ce1bc59a6992a4f32f0d62e4e
