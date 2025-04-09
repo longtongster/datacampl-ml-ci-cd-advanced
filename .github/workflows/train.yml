@@ -39,5 +39,4 @@ jobs:
         run: |
           git fetch --prune
           poetry run dvc metrics diff --md main >> metrics_compare.md
-          cml comment create metrics_compare.md          echo Add other actions to build,
-          echo test, and deploy your project.
+          cml comment create metrics_compare.md
